@@ -1,4 +1,10 @@
+## MYSQL
 
+## 使用方法
+
+自定义的root账户密码需要在environment中修改MYSQL_ROOT_PASSWORD。
+
+```yaml
 services:
   mysql:
     image: mysql:8.0.18
@@ -22,3 +28,16 @@ services:
       # 自定义root密码修改此处
       MYSQL_ROOT_PASSWORD: <your password>
       MYSQL_ROOT_HOST: '%'
+```
+
+启动方式：
+
+```bash
+
+mkdir docker-mysql8 && cd docker-mysql8
+
+docker-compose up -d
+
+# or
+docker compose up -d
+```
